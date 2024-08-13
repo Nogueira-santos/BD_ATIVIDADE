@@ -1,0 +1,69 @@
+Banco de Dados - DDL
+
+
+
+1. Criar tabela de banco de dados
+Para criar uma nova tabela com cinco campos de diferentes tipos, você pode usar o seguinte comando:
+
+ 
+CREATE TABLE exemplo_tabela (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100),
+    idade INT,
+    data_nascimento DATE
+);
+__________________________________________________________________________________
+id: um campo do tipo inteiro que se auto-incrementa.
+
+nome: um campo de texto (string) com um máximo de 100 caracteres.
+
+idade: um campo do tipo inteiro.
+
+data_nascimento: um campo do tipo data.
+___________________________________________________________________________________
+2. Adicionar um novo campo à tabela
+Para adicionar um novo campo à tabela existente, você pode usar o comando:
+ ALTER TABLE. 
+
+Por exemplo, para adicionar um campo de Idade:
+
+ 
+ALTER TABLE exemplo_tabela
+ADD Idade VARCHAR(15);
+____________________________________________________________________________________
+3. Mostrar a estrutura de uma tabela
+Para mostrar a estrutura (definição) da tabela:
+
+ 
+DESCRIBE exemplo_tabela;
+ou
+SHOW COLUMNS FROM exemplo_tabela;
+____________________________________________________________________________________
+4. Mostrar as tabelas do banco de dados
+Para listar todas as tabelas do banco de dados atual:
+
+ 
+SHOW TABLES;
+____________________________________________________________________________________
+5. Alterar um campo da tabela
+Para alterar a definição de um campo existente, como mudar o tipo do campo "salario" para um maior, você faz:
+
+ 
+ALTER TABLE exemplo_tabela
+MODIFY salario DECIMAL(12, 2);
+____________________________________________________________________________________
+6. Remover um campo da tabela
+Para remover um campo da tabela, como o campo "Idade" que foi adicionado anteriormente:
+
+ 
+ALTER TABLE exemplo_tabela
+DROP COLUMN Idade;
+____________________________________________________________________________________
+7. Remover a tabela
+Para remover a tabela inteira do banco de dados:
+
+DROP TABLE exemplo_tabela;
+
+ 
+Copy
+DROP TABLE exemplo_tabela;
